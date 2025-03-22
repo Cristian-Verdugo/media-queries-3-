@@ -1,0 +1,108 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background: #004d40;
+    color: white;
+    padding: 15px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    list-style: none;
+    display: none; /* Oculto en móvil */
+}
+
+.menu li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Ícono de menú hamburguesa */
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Filtros */
+.filters {
+    margin: 20px;
+}
+
+/* Grid de productos */
+.products {
+    display: grid;
+    grid-template-columns: 1fr; /* En móvil, una sola columna */
+    gap: 20px;
+    padding: 20px;
+}
+
+.product {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+button {
+    background: #004d40;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* Media Query para versión de escritorio */
+@media (min-width: 576px) {
+    .menu {
+        display: flex;
+    }
+    .menu-icon {
+        display: none; /* Ocultar en escritorio */
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
+    }
+}
+
+@media (min-width: 992px) {
+    .products {
+        grid-template-columns: repeat(4, 1fr); /* 4 columnas en pantallas grandes */
+    }
+}
